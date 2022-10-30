@@ -14,6 +14,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useState } from "react";
 import { CardMedia } from "@mui/material";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
+import Link from "next/link";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -48,10 +49,7 @@ function Header() {
         />
       </div>
       {/* sx={{ background: "#fff" }} */}
-      <AppBar
-        position="static"
-        sx={{ background: "#fff" }}
-      >
+      <AppBar position="static" sx={{ background: "#fff" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <FaceRetouchingNaturalIcon
@@ -119,17 +117,39 @@ function Header() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Link href="/" passHref>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography
                       // style={{ color: "red" }}
                       textAlign="center"
                       sx={{ color: "#313131" }}
                     >
-                      {page}
+                      Home
                     </Typography>
                   </MenuItem>
-                ))}
+                </Link>
+                <Link href="/product" passHref>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography
+                      // style={{ color: "red" }}
+                      textAlign="center"
+                      sx={{ color: "#313131" }}
+                    >
+                      Product
+                    </Typography>
+                  </MenuItem>
+                </Link>
+                <Link href="/" passHref>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography
+                      // style={{ color: "red" }}
+                      textAlign="center"
+                      sx={{ color: "#313131" }}
+                    >
+                      About
+                    </Typography>
+                  </MenuItem>
+                </Link>
               </Menu>
             </Box>
             {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
@@ -164,9 +184,8 @@ function Header() {
               }}
             ></Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
+              <Link href={"/"} passHref>
                 <Button
-                  key={page}
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
@@ -175,9 +194,35 @@ function Header() {
                     fontWeight: "medium",
                   }}
                 >
-                  {page}
+                  Home
                 </Button>
-              ))}
+              </Link>
+              <Link href={"/product"} passHref>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "#313131",
+                    display: "block",
+                    fontWeight: "medium",
+                  }}
+                >
+                  Product
+                </Button>
+              </Link>
+              <Link href={"/"} passHref>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "#313131",
+                    display: "block",
+                    fontWeight: "medium",
+                  }}
+                >
+                  About
+                </Button>
+              </Link>
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>

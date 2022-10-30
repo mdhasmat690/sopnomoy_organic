@@ -1,9 +1,4 @@
 import { Button, CardMedia, Grid, TextField, Typography } from "@mui/material";
-/* import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper"; */
 import Box from "@mui/material/Box";
 import { Container } from "@mui/system";
 import Sticky from "wil-react-sticky";
@@ -807,7 +802,15 @@ export default function Home() {
           </Grid>
           {/* --------------------Right side end--------- */}
           {/* ---------------------------Left side style start---------------------------- */}
-          <Grid item xs={4} sm={4} md={4}>
+          <Grid
+            item
+            xs={4}
+            sm={4}
+            md={4}
+            style={{
+              overflowY: "scroll",
+            }}
+          >
             <Sticky>
               {/* ---------------SUBSCRIBE start---------------- */}
               <Box>
@@ -1260,7 +1263,7 @@ export default function Home() {
               <iframe
                 style={{ marginTop: "30px" }}
                 width="100%"
-                height="400"
+                height="250"
                 src="https://www.youtube.com/embed/7WHBkm7R8Y4"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
