@@ -6,7 +6,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <Header></Header>
       <Component {...pageProps} />
-      <h2 style={{ height: "400px", backgroundColor: "red" }}>Hasmat</h2>
+      <div style={{ zIndex: 99, marginTop: "200px" }}>
+        <h2 style={{ height: "400px", backgroundColor: "red" }}>Hasmat</h2>
+      </div>
     </>
   );
 }
