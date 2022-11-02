@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Container } from "@mui/system";
 function Footer() {
   const st = {
     color: "#999",

@@ -13,7 +13,7 @@ function Product() {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-
+  if (products.length == 0) return <>loading</>;
   return (
     <div style={{ marginTop: " 50px" }}>
       <div>
@@ -23,6 +23,7 @@ function Product() {
             spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
+            {" "}
             {products.map((product) => {
               return (
                 <Grid key={product.id} item xs={4} sm={4} md={4}>

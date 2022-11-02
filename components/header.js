@@ -10,7 +10,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { useState } from "react";
 import { CardMedia } from "@mui/material";
 import FaceRetouchingNaturalIcon from "@mui/icons-material/FaceRetouchingNatural";
@@ -48,7 +47,6 @@ function Header() {
           alt="Paella dish"
         />
       </div>
-      {/* sx={{ background: "#fff" }} */}
       <AppBar position="static" sx={{ background: "#fff" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -59,34 +57,6 @@ function Header() {
                 color: "black",
               }}
             />
-            {/*   <CardMedia
-              sx={{
-                display: { xs: "none", md: "flex" },
-                mr: 1,
-                width: "10%",
-                height: "75%",
-                mx: "auto",
-              }}
-              component="img"
-              image="https://i.ibb.co/jLHvCsz/OSM-Logo-4c.png"
-              alt="Paella dish"
-            /> */}
-            {/* 
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            ></Typography> */}
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -119,40 +89,27 @@ function Header() {
               >
                 <Link href="/" passHref>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography
-                      // style={{ color: "red" }}
-                      textAlign="center"
-                      sx={{ color: "#313131" }}
-                    >
+                    <Typography textAlign="center" sx={{ color: "#313131" }}>
                       Home
                     </Typography>
                   </MenuItem>
                 </Link>
                 <Link href="/product" passHref>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography
-                      // style={{ color: "red" }}
-                      textAlign="center"
-                      sx={{ color: "#313131" }}
-                    >
+                    <Typography textAlign="center" sx={{ color: "#313131" }}>
                       Product
                     </Typography>
                   </MenuItem>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="/about" passHref>
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography
-                      // style={{ color: "red" }}
-                      textAlign="center"
-                      sx={{ color: "#313131" }}
-                    >
+                    <Typography textAlign="center" sx={{ color: "#313131" }}>
                       About
                     </Typography>
                   </MenuItem>
                 </Link>
               </Menu>
             </Box>
-            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
 
             <CardMedia
               sx={{
@@ -210,7 +167,7 @@ function Header() {
                   Product
                 </Button>
               </Link>
-              <Link href={"/"} passHref>
+              <Link href={"/about"} passHref>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{

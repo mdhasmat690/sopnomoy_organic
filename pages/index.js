@@ -10,34 +10,6 @@ import StickyBox from "react-sticky-box";
 export default function Home() {
   return (
     <>
-      {/*  <Banner />
-      <br />
-      <br />
-      <Container>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          <Grid item xs={4} sm={4} md={8}>
-            <Test />
-          </Grid>
-
-          <Grid
-            item
-            xs={4}
-            sm={4}
-            md={4}
-            // style={{
-            //   overflowY: "scroll",
-            // }}
-          >
-            <Sticky bottomOffset={80}>
-              <Left />
-            </Sticky>
-          </Grid>
-        </Grid>
-      </Container> */}
       <Banner />
       <br />
       <br />
