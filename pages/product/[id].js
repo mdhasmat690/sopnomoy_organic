@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { checkout } from "../../checkout";
 
 function SingleProduct() {
   const [single, setSingle] = useState({});
@@ -83,6 +84,16 @@ function SingleProduct() {
                   </Typography>
 
                   <Button
+                    onClick={() => {
+                      checkout({
+                        lineItems: [
+                          {
+                            price: "price_1LzcAHJ5yIiCfaq0SYixsp23",
+                            quantity: 1,
+                          },
+                        ],
+                      });
+                    }}
                     sx={{ width: "200px", mt: "25px" }}
                     variant="outlined"
                     color="error"
